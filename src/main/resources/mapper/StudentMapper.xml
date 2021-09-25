@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.leo.checkin.dao.StudentMapper">
+    <update id="updateCheckInfoById" parameterType="com.leo.checkin.model.Student">
+        UPDATE student
+           SET mail = #{mail},
+               destination = #{destination},
+               reason = #{reason},
+               start_time = #{startTime},
+               start_day = #{startDay},
+               end_time = #{endTime},
+               end_day = #{endDay},
+               cron = #{cron}
+         WHERE stu_num = #{stuNum}
+    </update>
+
+    <update id="updateEnable" parameterType="com.leo.checkin.model.Student">
+        UPDATE student
+           SET check_enable = #{checkEnable}
+         WHERE stu_num = #{stuNum}
+    </update>
+
+</mapper>
