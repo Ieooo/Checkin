@@ -12,6 +12,7 @@ CREATE TABLE student(
     start_time varchar(2),
     end_day varchar(2),
     end_time varchar(2),
+    cron varchar(20),
     check_enable tinyint not null default 0
 );
 
